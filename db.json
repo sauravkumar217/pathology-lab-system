@@ -1,0 +1,12 @@
+{
+  "patients": [],
+  "reports": [],
+  "tests": [],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123"
+    }
+  ]
+}

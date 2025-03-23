@@ -1,0 +1,388 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  color: #2d3436;
+  line-height: 1.6;
+  padding: 80px 20px 20px 20px; /* Adjusted padding to account for fixed header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container for centering content */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #4a90e2, #50c878);
+  padding: 15px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-brand a {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li a.nav-button {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+  display: inline-block;
+}
+
+/* Style for "Manage Patients & Tests" button */
+.navbar-links li:nth-child(1) a.nav-button {
+  background: linear-gradient(135deg, #4a90e2, #3a7bd5);
+}
+
+/* Hover effect for "Manage Patients & Tests" button */
+.navbar-links li:nth-child(1) a.nav-button:hover {
+  background: linear-gradient(135deg, #3a7bd5, #2a6ac5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Style for "Generate Reports" button */
+.navbar-links li:nth-child(2) a.nav-button {
+  background: linear-gradient(135deg, #50c878, #40b068);
+}
+
+/* Hover effect for "Generate Reports" button */
+.navbar-links li:nth-child(2) a.nav-button:hover {
+  background: linear-gradient(135deg, #40b068, #309058);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Welcome Header Styles */
+.welcome-header {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #ffffff, #e9ecef);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.welcome-header h1 {
+  font-size: 36px;
+  color: #4a90e2;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-header h2 {
+  font-size: 24px;
+  color: #2d3436;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.welcome-header p {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Success message styling */
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: 1px solid #c3e6cb;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Headings */
+h2, h3, h4, h5 {
+  color: #4a90e2;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Forms */
+form {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form:hover {
+  transform: translateY(-3px);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #4a90e2;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+}
+
+/* Buttons */
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, #4a90e2, #50c878);
+  color: #ffffff;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #3a7bd5, #40b068);
+}
+
+/* Add Another Test Button */
+button.add-test {
+  background: #50c878;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+button.add-test:hover {
+  background: #40b068;
+}
+
+/* Remove Test Button */
+button.remove-test {
+  background: #ff6f61;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+button.remove-test:hover {
+  background: #e65a50;
+}
+
+/* Logout Button */
+button.logout {
+  background: #6c757d;
+  color: #ffffff;
+}
+
+button.logout:hover {
+  background: #5a6268;
+}
+
+/* Delete Button in Patients List */
+button.delete {
+  background: #ff6f61;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+button.delete:hover {
+  background: #e65a50;
+}
+
+/* Test Section */
+.test-section {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease-in-out;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Patients List */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+li {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+li span {
+  color: #2d3436;
+  font-weight: 500;
+}
+
+/* Error Messages */
+.error {
+  color: #ff6f61;
+  margin-bottom: 20px;
+  font-weight: 500;
+  background: #ffe6e3;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Info Messages (e.g., login credentials hint) */
+.info {
+  color: #4a90e2;
+  margin-bottom: 20px;
+  font-weight: 500;
+  background: #e6f0fa;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Report Generation Styles */
+.report-item {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.report-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.report-item button {
+  margin-left: 10px;
+}
+
+.report-item button:first-of-type {
+  background: #4a90e2;
+  color: #ffffff;
+}
+
+.report-item button:first-of-type:hover {
+  background: #3a7bd5;
+}
+
+.report-item button:last-of-type {
+  background: #50c878;
+  color: #ffffff;
+}
+
+.report-item button:last-of-type:hover {
+  background: #40b068;
+}
